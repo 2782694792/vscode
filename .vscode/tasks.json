@@ -1,0 +1,63 @@
+// CMake ---------------------------------------------
+{
+	"version": "2.0.0",
+	"options": {
+		"cwd": "${workspaceFolder}/build"
+	},
+	"tasks": [
+		{
+			"label": "cmake",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"-DCMAKE_BUILD_TYPE=Debug",
+				".."
+			]
+		},
+		{
+			"label": "CMake : debugging",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"type": "shell",
+			// "command": "make",
+			"command": "mingw32-make",
+			"args": []
+		}
+	]
+}
+// run code  ---------------------------------------------
+// {
+// 	"tasks": [
+// 		{
+// 			"type": "cppbuild",
+// 			"label": "C/C++: g++.exe 生成活动文件",
+// 			"command": "F:\\Dev\\mingw_7.3.0\\bin\\g++.exe",
+// 			"args": [
+// 				"-fdiagnostics-color=always",
+// 				"-g",
+// 				"-Isource/2212",
+// 				"06Json.cpp",
+// 				"10Parser.cpp",
+// 				"-fexec-charset=GBK", // 处理mingw中文编码问题
+// 				"-finput-charset=UTF-8", // 处理mingw中文编码问题
+// 				"${file}",
+// 				"-o",
+// 				"${fileDirname}\\main.exe"
+// 			],
+// 			"options": {
+// 				"cwd": "${fileDirname}"
+// 			},
+// 			"problemMatcher": [
+// 				"$gcc"
+// 			],
+// 			"group": {
+// 				"kind": "build",
+// 				"isDefault": true
+// 			},
+// 			"detail": "调试器生成的任务。"
+// 		}
+// 	],
+// 	"version": "2.0.0"
+// }

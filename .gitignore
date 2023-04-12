@@ -1,0 +1,8 @@
+bin
+*.o
+*.i
+*.s
+File
+build
+src/.gitignore
+src/.git
